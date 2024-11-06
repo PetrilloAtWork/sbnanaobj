@@ -1,0 +1,40 @@
+/** @addtogroup StandardRecord
+
+caf::SRHeader
+--------------
+
+Overview information for the current event and slices.
+
+
+| class         | variable        | type                         | access path                | units  | default                   | description                                                                               | detector  | reference  |
+| ------------- | --------------- | ---------------------------- | -------------------------- | ------ | ------------------------- | ----------------------------------------------------------------------------------------- | --------- | ---------- |
+| caf::SRHeader | run             | unsigned int                 | `rec.hrd.run`              |        |                           | run number                                                                                |           |            | 
+| caf::SRHeader | subrun          | unsigned int                 | `rec.hrd.subrun`           |        |                           | subrun number                                                                             |           |            |
+| caf::SRHeader | evt             | unsigned int                 | `rec.hrd.evt`              |        |                           | ART event number, indexes trigger windows.                                                |           |            |
+| caf::SRHeader | subevt          | unsigned short               | `rec.hrd.subevt`           |        |                           | slice number within spill                                                                 |           |            |
+| caf::SRHeader | ismc            | bool                         | `rec.hrd.ismc`             |        |                           | data or MC?  True if MC                                                                   |           |            |
+| caf::SRHeader | isblind         | bool                         | `rec.hrd.isblind`          |        |                           | is this a blinded or prescaled file? true if so                                           |           |            |
+| caf::SRHeader | fno             | unsigned int                 | `rec.hrd.fno`              |        |                           | Index of file processed by CAFMaker                                                       |           |            |
+| caf::SRHeader | ngenevt         | unsigned int                 | `rec.hrd.ngenevt`          |        |                           | Number of events generated in input file associated with this record (before any filters) |           |            |
+| caf::SRHeader | pot             | float                        | `rec.hrd.pot`              |        |                           | POT of the subrun associated with this record                                             |           |            |
+| caf::SRHeader | mctype          | MCType_t                     | `rec.hrd.mctype`           |        |                           | Type of Monte Carlo used to generate this record                                          |           |            |
+| caf::SRHeader | det             | Det_t                        | `rec.hrd.det`              |        |                           | Detector, SBND=1 ICARUS=2                                                                 |           |            |
+| caf::SRHeader | first_in_subrun | bool                         | `rec.hrd.first_in_subrun`  |        |                           | Whether this event is the first in the subrun                                             |           |            |
+| caf::SRHeader | first_in_file   | bool                         | `rec.hrd.first_in_file`    |        |                           | Whether this event is there first in the input file                                       |           |            |
+| caf::SRHeader | proc            | int                          | `rec.hrd.proc`             |        |                           | Process number of job that created CAF file                                               |           |            |
+| caf::SRHeader | cluster         | int                          | `rec.hrd.cluster`          |        |                           | Cluster number of job that created CAF file                                               |           |            |
+| caf::SRHeader | nbnbinfo        | size_t                       | `rec.hrd.nbnbinfo`         |        |                           | Number of BNBInfo objects                                                                 |           |            |
+| caf::SRHeader | bnbinfo         | caf::SRBNBInfo (vector)      | `rec.hrd.bnbinfo`          |        |                           | storing beam information per subrun                                                       |           |            |
+| caf::SRHeader | spillbnbinfo    | caf::SRBNBInfo               | `rec.hrd.spillbnbinfo`     |        |                           | storing beam information for given event's spill                                          |           |            |
+| caf::SRHeader | noffbeambnb     | double                       | `rec.hrd.noffbeambnb`      |        |                           | Number of offbeam BNB gates                                                               |           |            |
+| caf::SRHeader | nnumiinfo       | size_t                       | `rec.hrd.nnumiinfo`        |        |                           | Number of NuMIInfo objects                                                                |           |            |
+| caf::SRHeader | numiinfo        | caf::SRNuMIInfo (vector)     | `rec.hrd.numiinfo`         |        |                           | storing beam information per subrun                                                       |           |            |
+| caf::SRHeader | spillnumiinfo   | caf::SRNuMIInfo              | `rec.hrd.spillnumiinfo`    |        |                           | storing beam information for given event's spill                                          |           |            |
+| caf::SRHeader | noffbeamnumi    | double                       | `rec.hrd.noffbeamnumi`     |        |                           | Number of offbeam NuMI gates                                                              |           |            |
+| caf::SRHeader | triggerinfo     | caf::SRTrigger               | `rec.hrd.triggerinfo`      |        |                           | storing trigger information per event                                                     |           |            |
+| caf::SRHeader | sourceName      | std::string                  | `rec.hrd.sourceName`       |        |                           | Name of the file or source this event comes from.                                         |           |            |
+| caf::SRHeader | sourceIndex     | unsigned int                 | `rec.hrd.sourceIndex`      |        | `SRHeader::NoSourceIndex` | Index of this event within the source (zero-based).                                       |           |            |
+| caf::SRHeader | sourceNameHash  | std::uint32_t                | `rec.hrd.sourceNameHash`   |        |                           | hash of sourceName, `std::hash<std::string>(sourceName)`, then truncated to `std::uint32_t`. Should be 32-bit integer to be used as [TTreeIndex](https://root.cern/doc/master/classTTreeIndex.html#a08aac749ab22fd5c8ab792a0061a4b0f) |           |            |
+| caf::SRHeader | husk            | bool                         | `rec.hrd.husk             |        |                           |                                                                                           |           |            |
+
+ */

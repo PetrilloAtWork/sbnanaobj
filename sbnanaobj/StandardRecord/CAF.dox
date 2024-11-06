@@ -1,0 +1,17 @@
+/** @defgroup StandardRecord Common Analysis Format "standard record"
+
+Each entry has (or may have) the following information:
+
+| column       | description                                                                       |
+| ------------ | --------------------------------------------------------------------------------- |
+| class        | the C++ class the branch belongs to                                               |
+| variable     | the name in the tree of the variable being documented                             |
+| type         | data type (e.g. `int` or a custom class name)                                     |
+| access path  | the full branch name                                                              |
+| units        | only if different from [the standard ones](@ref md_sbnanaobj_2sbnanaobj_2StandardRecord_2README) |
+| default      | value representing the absence of information                                     |
+| description  |                                                                                   |
+| detector     | whether it is specific to only one of the detectors (SBND or ICARUS)              |
+| reference    | further documentation (preferably on [SBN DocDB](https://sbn-docdb.fnal.gov/cgi-bin/sso/DocumentDatabase)) |
+
+ */
