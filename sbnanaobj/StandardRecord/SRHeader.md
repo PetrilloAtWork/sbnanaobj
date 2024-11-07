@@ -1,7 +1,4 @@
-/** @addtogroup StandardRecord
-
-caf::SRHeader
---------------
+@section CAF_SRHeader caf::SRHeader
 
 Overview information for the current event and slices.
 
@@ -35,6 +32,4 @@ Overview information for the current event and slices.
 | caf::SRHeader | sourceName      | std::string                  | `rec.hrd.sourceName`       |        |                           | Name of the file or source this event comes from.                                         |           |            |
 | caf::SRHeader | sourceIndex     | unsigned int                 | `rec.hrd.sourceIndex`      |        | `SRHeader::NoSourceIndex` | Index of this event within the source (zero-based).                                       |           |            |
 | caf::SRHeader | sourceNameHash  | std::uint32_t                | `rec.hrd.sourceNameHash`   |        |                           | hash of sourceName, `std::hash<std::string>(sourceName)`, then truncated to `std::uint32_t`. Should be 32-bit integer to be used as [TTreeIndex](https://root.cern/doc/master/classTTreeIndex.html#a08aac749ab22fd5c8ab792a0061a4b0f) |           |            |
-| caf::SRHeader | husk            | bool                         | `rec.hrd.husk             |        |                           |                                                                                           |           |            |
-
- */
+| caf::SRHeader | husk            | bool                         | `rec.hrd.husk`             |        |                           |                                                                                           |           |            |

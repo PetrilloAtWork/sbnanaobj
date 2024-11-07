@@ -1,4 +1,8 @@
-/** @defgroup StandardRecord Common Analysis Format "standard record"
+/** @page StandardRecord Common Analysis Format "standard record"
+
+@defgroup StandardRecord Common Analysis Format "standard record"
+
+@tableofcontents
 
 Each entry has (or may have) the following information:
 
@@ -13,5 +17,8 @@ Each entry has (or may have) the following information:
 | description  |                                                                                   |
 | detector     | whether it is specific to only one of the detectors (SBND or ICARUS)              |
 | reference    | further documentation (preferably on [SBN DocDB](https://sbn-docdb.fnal.gov/cgi-bin/sso/DocumentDatabase)) |
+
+
+@include{doc} srcs/sbnanaobj/sbnanaobj/StandardRecord/SRHeader.md
 
  */
