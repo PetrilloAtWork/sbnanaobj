@@ -1,7 +1,5 @@
 /** @page StandardRecord Common Analysis Format "standard record"
 
-@defgroup StandardRecord Common Analysis Format "standard record"
-
 @tableofcontents
 
 Each entry has (or may have) the following information:
